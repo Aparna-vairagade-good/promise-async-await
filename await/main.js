@@ -1,3 +1,15 @@
+//Q1.
+
+    function callbackFunction(Aaisha) { 
+console.log('Hello ' + Aaisha); 
+} 
+function outerFunction(callback) { 
+let name = prompt('hii i am Aparna'); 
+callback(Aaisha); 
+} 
+outerFunction(callbackFunction); 
+
+
 //Q2.
 setTimeout(() => {
 let count=1;
