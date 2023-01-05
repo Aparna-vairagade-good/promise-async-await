@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>PROMISE ASYNC AWAIT</h1>
+    <h3>//Q1.Write one example explaining how you can write a callback function.</h3> <br>
+
+    function callbackFunction(Aaisha) { <br>
+console.log('Hello ' + Aaisha); <br>
+} <br>
+function outerFunction(callback) { <br>
+let name = prompt('hii i am Aparna'); <br>
+callback(Aaisha); <br>
+} <br>
+outerFunction(callbackFunction); <br><br>
+Output : 'hii i am Aparna'
+
+<h3>//Q2."Write a callback function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. <br>
+
+Explain callback hell. <br>
+Numbers <br>
+1 <br>
+2 <br>
+3 <br>
+4 <br>
+5 <br>
+6 <br>
+7"</h3> <br>
+
+setTimeout(() => { <br>
+let count=1; <br>
+    console.log(count++); <br>
+    setTimeout(() => { <br>
+        console.log(count++); <br>
+        setTimeout(() => { <br>
+            console.log(count++); <br>
+            setTimeout(() => { <br>
+                console.log(count++); <br>
+                setTimeout(() => { <br>
+                    console.log(count++); <br>
+                    setTimeout(() => { <br>
+                        console.log(count++); <br>
+                        setTimeout(() => { <br>
+                            console.log(count++); <br>
+                        }, 7000); <br>
+                    }, 6000); <br>
+                }, 5000); <br>
+            }, 4000); <br>
+        }, 3000); <br>
+    }, 2000); <br>
+}, 1000); <br>
+
+
+<h3>//Q3."Write the promise function to print numbers from 1 to 7, in which 1 should be printed after 1 sec, 2 should be printed after 2 sec, 3 should be printed after 3 sec, and so on. 
+
+    Numbers
+    1
+    2
+    3
+    4
+    5
+    6
+    7"</h3> <br>
+    setTimeout(() => { <br>
+    let count=1; <br>
+            console.log(1); <br>
+            setTimeout(() => { <br>
+                console.log(2); <br>
+                setTimeout(() => { <br>
+                    console.log(3); <br>
+                    setTimeout(() => { <br>
+                        console.log(4); <br>
+                        setTimeout(() => { <br>
+                            console.log(5); <br>
+                            setTimeout(() => { <br>
+                                console.log(6); <br>
+                                setTimeout(() => { <br>
+                                    console.log(7); <br>
+                                }, 7000); <br>
+                            }, 6000); <br>
+                        }, 5000); <br>
+                    }, 4000); <br>
+                }, 3000); <br>
+            }, 2000); <br>
+        }, 1000); <br>
+
+        <h3>//Q4."Create a promise function accepting an argument, if yes is passed to the function then it should go to resolved state and print Promise Resolved, and if nothing is passed 
+            then it should go to reject the state and catch the error and print Promise Rejected "</h3> <br>
+            let promise = new Promise(function (resolve, reject) { <br>
+                let a = 20; <br>
+                if (a > 9) { <br>
+                    resolve("Promise Resolved"); <br>
+                } <br>
+                else reject("Promise Rejected"); <br>
+            }) <br>
+            promise.then((data) => { console.log(data); }).catch((data) => { console.log(data); }) <br> <br>
+
+            OUTPUT : Promise Resolved
+
+            <h3>//Q5.Create examples to explain callback function</h3> <br>
+             
+            function callbackFunction(name) { <br>
+                console.log('Hello ' + name); <br>
+                } <br>
+                function outerFunction(callback) { <br>
+                let name = prompt('hello we write a callback function'); <br>
+                callback(name); <br>
+                } <br>
+                outerFunction(callbackFunction); <br><br>
+                OUTPUT : hello we write a callback function 
+
+                <h3>//Q6.Create examples to explain callback hell function</h3> <br>
+function callbackhell (){
+setTimeout(() => { <br>
+    let count=1; <br>
+            console.log(1); <br>
+            setTimeout(() => { <br>
+                console.log(2); <br>
+                setTimeout(() => { <br>
+                    console.log(3); <br>
+                    setTimeout(() => { <br>
+                        console.log(4); <br>
+                        setTimeout(() => { <br>
+                            console.log(5); <br>
+                            setTimeout(() => { <br>
+                                console.log(6); <br>
+                                setTimeout(() => { <br>
+                                    console.log(7); <br>
+                                }, 7000); <br>
+                            }, 6000); <br>
+                        }, 5000); <br>
+                    }, 4000); <br>
+                }, 3000); <br>
+            }, 2000); <br>
+        }, 1000); <br>
+    }
+    callbackhell();
+
+    <h3>//Q7.Create examples to explain async await function</h3> <br>
+
+        function mypromise(num){ <br>
+            let promise=new Promise((resolve, reject) => { <br>
+                if(num%2==0){ <br>
+                    resolve("Its Even Number") <br>
+                } <br>
+                else{ <br>
+                    reject("Its Odd Number") <br>
+                } <br>
+            }) <br>
+            return promise <br>
+            } <br>
+            async function Getresult(){ <br>
+                try{ <br>
+                    let data=await mypromise(8) <br>
+                    console.log(data) <br>
+                }catch(err){ <br>
+                    console.log(err) <br>
+                } <br>
+            } <br>
+            Getresult() <br>
+
+            OUTPUT : Its even number 
+        
+
+            <script src="./main.js"></script>
+</body>
+</html>
